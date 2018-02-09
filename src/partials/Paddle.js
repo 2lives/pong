@@ -31,6 +31,14 @@ this.y = Math.max( 0,  this.y - this.speed );
 this.y = Math.min( this.boardHeight - this.height,   this.y + this.speed); //returns smallest of the two
   }
 
+  coordinates(x, y, width, height) {
+    let leftX = x;
+    let rightX = x + width;
+    let topY = y;
+    let bottomY = y + height;
+    return [leftX, rightX, topY, bottomY];
+  }
+
   /**
    * render svg images (block comments)
    */
