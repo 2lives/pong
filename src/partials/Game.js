@@ -43,6 +43,8 @@ export default class Game {
 
 		this.ball = new Ball (8, this.width,	this.height);
 		this.ball1 = new Ball (8, this.width,	this.height);
+		this.ball2 = new Ball (6, this.width, this.height );
+
 
 		document.addEventListener('keydown', event => {
 			switch(event.key){
@@ -63,11 +65,11 @@ export default class Game {
 		}
 		let p1w = document.getElementById('player1w');
 		let p2w = document.getElementById('player2w');
-					if (this.score1 >= 5) {
+					if (this.player1.score >= 20) {
 				p1w.style.display = 'block';
 		}else{p1w.style.display='none'}
-		if(this.score2 >=5){
-			p2w.style.display='block';
+		if(this.player2.score >=20){
+			p2w.style.display='block';	
 		}else{p2w.style.display='none'}
 
 
@@ -95,6 +97,10 @@ this.player2.render(svg);
 
 this.ball.render(svg, this.player1, this.player2);
 this.ball1.render(svg, this.player1, this.player2);
+
+if(this.player1.score >=10 || this.player2.score >= 10){
+	this.ball2.render(svg, this.player1, this.player2);
+}
 
 
 this.score1.render(svg, this.player1.score);

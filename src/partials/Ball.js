@@ -90,22 +90,8 @@ this.vx = this.direction * (8 - Math.abs(this.vy));
     this.reset();
     console.log(player.score);
   }
-  
-    //   let p1w = document.getElementById('player1w');
-    //   let p2w = document.getElementById('player2w');
-    //         if (player.score >= 5) {
-    //       p1w.style.display = 'block';
-    //   }else{p1w.style.display='none'}
-    //   if(player.score >=5){
-    //     p2w.style.display='block';
-    //   }else{p2w.style.displau='none'}
-    // }
 
   render(svg, player1, player2) {
-
-    // if(this.pause){
-    //   return;
-    // }
 
     this.x  += this.vx;
     this.y += this.vy;
