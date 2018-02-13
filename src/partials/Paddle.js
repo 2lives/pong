@@ -71,7 +71,8 @@ this.y = Math.min( this.boardHeight - this.height,   this.y + this.speed); //ret
     }
 
     let rect = document.createElementNS(SVG_NS, 'rect');
-    rect.setAttributeNS(null, 'fill', 'white');
+    rect.setAttributeNS(null, 'fill', 'magenta');
+    rect.setAttributeNS(null, 'stroke', 'red');
     rect.setAttributeNS(null, 'width', this.width);
     rect.setAttributeNS(null, 'height', this.height);
     rect.setAttributeNS(null, 'x', this.x);

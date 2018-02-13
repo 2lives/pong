@@ -7,9 +7,22 @@ export default class Ball {
     this.boardHeight = boardHeight;
     this.direction = 1;
 
-    this.ping = new Audio('public/sounds/pong-01.wav');
 
 
+    this.ping = new Audio('public/sounds/6_1njp68r.mp3')
+  //   let mute = false;
+  //   document.getElementById('#mute').onclick = function(){
+  //     if (mute == true){
+  //       mute = false;
+  //     }else{
+  //       mute = true;
+  //     }
+  //   }
+  //  if (mute == true){ this.ping = new Audio('')
+  
+  // }else{   this.ping = new Audio('public/sounds/6_1njp68r.mp3')}
+    
+        
     this.reset();
 
   }//constructor
@@ -22,16 +35,9 @@ this.vy= 0;
 while(this.vy ===0){
 this.vy = Math.floor(Math.random() * 10 - 5);
 } //generates a number between 5 and -5 based on this.vy. This guarantees that if vy is large, vx is small (and vice versa)
-this.vx = this.direction * (10 - Math.abs(this.vy));
+this.vx = this.direction * (8 - Math.abs(this.vy));
 
-  }
-
-  goal(player){
-    player.score++;
-    this.reset();
-    console.log(player.score);
-  }
-
+    }
   wallCollision(){
     const hitLeft = this.x  - this.radius <= 0;
     const hitRight = this.x + this.radius >= this.boardWidth;
@@ -47,6 +53,7 @@ this.vx = this.direction * (10 - Math.abs(this.vy));
   }//method
 
   paddleCollision(player1, player2){
+
     if(this.vx > 0 /*moving to the right*/){
       let paddle = player2.coordinates(player2.x, player2.y, player2.width, player2.height);
       let [leftX, rightX, topY, bottomY] = paddle;
@@ -78,6 +85,22 @@ this.vx = this.direction * (10 - Math.abs(this.vy));
     }//else
   }//paddle method
 
+  goal(player){
+    player.score++;
+    this.reset();
+    console.log(player.score);
+  }
+  
+    //   let p1w = document.getElementById('player1w');
+    //   let p2w = document.getElementById('player2w');
+    //         if (player.score >= 5) {
+    //       p1w.style.display = 'block';
+    //   }else{p1w.style.display='none'}
+    //   if(player.score >=5){
+    //     p2w.style.display='block';
+    //   }else{p2w.style.displau='none'}
+    // }
+
   render(svg, player1, player2) {
 
     // if(this.pause){
@@ -94,7 +117,8 @@ this.vx = this.direction * (10 - Math.abs(this.vy));
     circle.setAttributeNS(null, 'r', this.radius);
     circle.setAttributeNS(null, 'cx', this.x);
     circle.setAttributeNS(null, 'cy', this.y);
-    circle.setAttributeNS(null, 'fill', 'white');
+    circle.setAttributeNS(null, 'fill', 'lightblue');
+    circle.setAttributeNS(null, 'stroke', 'yellow');
 
     svg.appendChild(circle);
 

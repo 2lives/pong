@@ -3,20 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Pong</title>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 	<body>
 		<div class="game-wrapper">
+			<!-- <i class="fal fa-volume-up" id="mute">Mute</i> -->
 			<h1>Pong</h1>
-			<div id="game"></div>
-			<!-- Rough-out your SVG mark-up here to start... -->
-			<!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 256" width="500" height="300">
-			<rect  width="512" height="256" color="#353535"/>
-			<rect width="8" height="56" x="494" y="100" stroke="red" fill="magenta"/>
-			<rect width="8" height="56" x="10" y="100"stroke="blue" fill="skyblue"/>
-			<line stroke-dasharray="10, 5"    x1="256" y1="500" x2="256" y2="0" stroke="white"/>
-			<circle r="8" cx="256" cy="128"stroke="green" fill="turquoise" />
-			</svg> -->
+			<div id="game">
 		</div>
+		<div class="winnertags">
+				<p id="player1w"  style="display:none">Player 1 wins</p>
+				<p id="player2w" style="display:none">Player 2 wins</p>
+			</div>
 		<script type="text/javascript" src="build/bundle.js"></script>
 	</body>
 </html>
