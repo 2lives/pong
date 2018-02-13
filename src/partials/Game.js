@@ -65,12 +65,14 @@ export default class Game {
 		}
 		let p1w = document.getElementById('player1w');
 		let p2w = document.getElementById('player2w');
-					if (this.player1.score >= 20) {
+					if (this.player1.score >= 25) {
 				p1w.style.display = 'block';
 		}else{p1w.style.display='none'}
-		if(this.player2.score >=20){
+		if(this.player2.score >=25){
 			p2w.style.display='block';	
 		}else{p2w.style.display='none'}
+
+
 
 
 			// var show = document.getElementById('p1w');
@@ -98,10 +100,9 @@ this.player2.render(svg);
 this.ball.render(svg, this.player1, this.player2);
 this.ball1.render(svg, this.player1, this.player2);
 
-if(this.player1.score >=10 || this.player2.score >= 10){
+if(this.player1.score >=7 || this.player2.score >= 7){
 	this.ball2.render(svg, this.player1, this.player2);
 }
-
 
 this.score1.render(svg, this.player1.score);
 this.score2.render(svg, this.player2.score);

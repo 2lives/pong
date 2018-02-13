@@ -36,8 +36,9 @@ while(this.vy ===0){
 this.vy = Math.floor(Math.random() * 10 - 5);
 } //generates a number between 5 and -5 based on this.vy. This guarantees that if vy is large, vx is small (and vice versa)
 this.vx = this.direction * (8 - Math.abs(this.vy));
-
     }
+
+
   wallCollision(){
     const hitLeft = this.x  - this.radius <= 0;
     const hitRight = this.x + this.radius >= this.boardWidth;
@@ -90,7 +91,6 @@ this.vx = this.direction * (8 - Math.abs(this.vy));
     this.reset();
     console.log(player.score);
   }
-
   render(svg, player1, player2) {
 
     this.x  += this.vx;
