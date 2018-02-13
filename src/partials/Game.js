@@ -71,19 +71,6 @@ export default class Game {
 		if(this.player2.score >=25){
 			p2w.style.display='block';	
 		}else{p2w.style.display='none'}
-
-
-
-
-			// var show = document.getElementById('p1w');
-			// var show2 = document.getElementById('p2w');
-			// if (this.score1 == 5 && this.score2 !==5) {
-			// 		show.style.display = 'block';
-			// }else{show.style.display='none'}
-			// if (this.score2 ==5 && this.score1 !==5){
-			// 	show2.style.display = 'block';
-			// }else{show2.style.display='none'}
-		
 		
 		this.gameElement.innerHTML = '';
 		// More code goes here...
