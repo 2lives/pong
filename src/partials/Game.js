@@ -63,13 +63,16 @@ export default class Game {
 		if(this.pause){
       return;
 		}
+	
 		let p1w = document.getElementById('player1w');
 		let p2w = document.getElementById('player2w');
 					if (this.player1.score >= 25) {
-				p1w.style.display = 'block';
+						this.pause = 1,
+						p1w.style.display = 'block';
 		}else{p1w.style.display='none'}
 		if(this.player2.score >=25){
-			p2w.style.display='block';	
+						this.pause = 1,
+						p2w.style.display='block';	
 		}else{p2w.style.display='none'}
 		
 		this.gameElement.innerHTML = '';

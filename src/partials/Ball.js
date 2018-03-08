@@ -1,4 +1,4 @@
-import { SVG_NS, KEYS} from '../settings';
+import { SVG_NS} from '../settings';
 
 export default class Ball {
   constructor(radius, boardWidth, boardHeight) {
@@ -10,17 +10,6 @@ export default class Ball {
 
 
     this.ping = new Audio('public/sounds/6_1njp68r.mp3')
-  //   let mute = false;
-  //   document.getElementById('#mute').onclick = function(){
-  //     if (mute == true){
-  //       mute = false;
-  //     }else{
-  //       mute = true;
-  //     }
-  //   }
-  //  if (mute == true){ this.ping = new Audio('')
-  
-  // }else{   this.ping = new Audio('public/sounds/6_1njp68r.mp3')}
     
         
     this.reset();
